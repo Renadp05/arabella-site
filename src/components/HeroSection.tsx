@@ -8,6 +8,8 @@ export default function HeroSection() {
       <Image
         src="/homescreen_5961.jpg" // vendos këtu foton tënde
         alt="Arabella Restaurant"
+         width={1920}
+  height={1080}
         fill
         priority
         className="object-cover"
