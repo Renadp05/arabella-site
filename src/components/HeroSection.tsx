@@ -6,7 +6,8 @@ export default function HeroSection() {
     <section className="relative h-screen w-full">
       {/* Foto kryesore */}
       <Image
-        src="/homescreen_5961.jpg" // vendos këtu foton tënde
+        src="/menu/homescreen_5961.jpg"
+
         alt="Arabella Restaurant"
          width={1920}
   height={1080}
