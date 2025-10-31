@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ================== Variabla bazë ================== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Tema bazë për Tailwind */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ================== Dark Mode ================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ================== Efektet ================== */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 5s ease infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* ================== Efekte Neon ================== */
+.text-neon-teal {
+  color: #00ffe7;
+}
+.text-neon-pink {
+  color: #f700ff;
+}
+.drop-shadow-neonTeal {
+  filter: drop-shadow(0 0 10px #00ffe7);
+}
+
+/* ================== Animacione Premium ================== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-fadeInUp.delay-200 {
+  animation-delay: 0.2s;
+}
