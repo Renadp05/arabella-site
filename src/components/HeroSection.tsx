@@ -6,11 +6,8 @@ export default function HeroSection() {
     <section className="relative h-screen w-full">
       {/* Foto kryesore */}
       <Image
-        src="/menu/homescreen_5961.jpg"
-
+        src="/homescreen_5961.jpg" // Fotoja është direkt në public/
         alt="Arabella Restaurant"
-         width={1920}
-  height={1080}
         fill
         priority
         className="object-cover"
