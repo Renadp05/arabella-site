@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+import CollapsibleSection from "@/components/CollapsibleSection";
 import {
   mainMenu,
   breakfastMenu,
@@ -5,7 +8,6 @@ import {
   MenuSection as MenuSectionType,
 } from "@/data/menu";
 import MenuSection from "@/components/MenuSection";
-import React from "react";
 
 export default function MenuPage() {
   return (
@@ -28,11 +30,15 @@ export default function MenuPage() {
           </p>
         </div>
 
-        {mainMenu.map((section, index) => (
-          <div key={`main-${index}`} className="mb-12">
-            <MenuSection section={section as MenuSectionType} />
-          </div>
-        ))}
+        <div className="max-w-5xl mx-auto">
+          <CollapsibleSection title="Open All Day Menu">
+            {mainMenu.map((section, index) => (
+              <div key={`main-${index}`} className="mb-10">
+                <MenuSection section={section as MenuSectionType} />
+              </div>
+            ))}
+          </CollapsibleSection>
+        </div>
       </section>
 
       {/* ========== BREAKFAST MENU ========== */}
@@ -43,11 +49,15 @@ export default function MenuPage() {
           </h2>
         </div>
 
-        {breakfastMenu.map((section, index) => (
-          <div key={`breakfast-${index}`} className="mb-12">
-            <MenuSection section={section as MenuSectionType} />
-          </div>
-        ))}
+        <div className="max-w-5xl mx-auto">
+          <CollapsibleSection title="Open Breakfast Menu">
+            {breakfastMenu.map((section, index) => (
+              <div key={`breakfast-${index}`} className="mb-10">
+                <MenuSection section={section as MenuSectionType} />
+              </div>
+            ))}
+          </CollapsibleSection>
+        </div>
       </section>
 
       {/* ========== ROMANIAN SPECIALS ========== */}
@@ -61,11 +71,15 @@ export default function MenuPage() {
           </p>
         </div>
 
-        {romanianSpecial.map((section, index) => (
-          <div key={`romanian-${index}`} className="mb-12">
-            <MenuSection section={section as MenuSectionType} />
-          </div>
-        ))}
+        <div className="max-w-5xl mx-auto">
+          <CollapsibleSection title="Open Romanian Specials">
+            {romanianSpecial.map((section, index) => (
+              <div key={`romanian-${index}`} className="mb-10">
+                <MenuSection section={section as MenuSectionType} />
+              </div>
+            ))}
+          </CollapsibleSection>
+        </div>
       </section>
 
       {/* ========== FOOTER ========== */}
