@@ -40,7 +40,7 @@ export default function MenuSection({ section }: { section: MenuSection }) {
               {item.price !== undefined && (
                 <span className="text-neon-pink font-bold">
                   {typeof item.price === "number"
-                    ? `${item.price} €`
+                    ? `${item.price} £`
                     : item.price}
                 </span>
               )}

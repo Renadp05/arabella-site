@@ -33,7 +33,7 @@ export default function MenuDisplay({ sections }: Props) {
                 </div>
                 {item.price && (
                   <div className="text-purple-300 font-semibold mt-2 md:mt-0 md:ml-4">
-                    €{item.price}
+                    £{item.price}
                   </div>
                 )}
               </div>
